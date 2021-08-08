@@ -4,6 +4,12 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    if (argc < 3)
+    {
+        cout << "Usage: " << argv[0] << " [deviceName] [serverip]" << endl;
+        return -1;
+    }
+
     cout << endl
          << endl;
     cout << "****************************************************************************" << endl;
@@ -13,12 +19,6 @@ int main(int argc, char *argv[])
 
     int sock_c;
     struct sockaddr_in addr_s;
-
-    if (argc < 2)
-    {
-        cout << "Usage: " << argv[0] << " [deviceName]" << endl;
-        return -1;
-    }
 
     md_data_t data;
     memset(&data, 0, sizeof(data));
@@ -34,12 +34,12 @@ int main(int argc, char *argv[])
     // fill IP/Port and connect
     memset(&addr_s, 0, sizeof(addr_s));
     addr_s.sin_family = AF_INET;
-    addr_s.sin_addr.s_addr = inet_addr("127.0.0.1");
+    addr_s.sin_addr.s_addr = inet_addr(argv[2]);
     addr_s.sin_port = SERVICE_PORT;
 
     if (connect(sock_c, (struct sockaddr *)&addr_s, sizeof(addr_s)) < 0)
     {
-        cerr << "Failed to connect to Monitoring Server." << endl;
+        cerr << "Failed to connect to Monitoring Server @." << string(argv[2]) << endl;
         return -2;
     }
 
