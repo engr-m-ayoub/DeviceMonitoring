@@ -56,11 +56,13 @@ DeviceMonitoring
 
 2- serve keeps track of messages count for each device and diffrentiate a device with its name.
 
-3- client send dummy data to server but device name remains same throughout session.
+3- client sends dummy data to server but device name remains same throughout session.
 
-4- on client restart over a device, server will retain its messages count.
+4- clients/device sends data every 5 seconds. 
 
-5- on server restart, all clients get disconnected and server loose messages count for all devices.
+5- on client restart over a device, server will retain its messages count.
+
+6- on server restart, all clients get disconnected and server loose messages count for all devices.
 
 # Configurations
 currently this server will handle 10 clients and will run port 8000 but these are compile time configureable. MAX_DEVICES_ALLOWED & SERVICE_PORT can be redefined in inc/monitoring.h.
