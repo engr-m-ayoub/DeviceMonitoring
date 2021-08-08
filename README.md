@@ -19,11 +19,11 @@ DeviceMonitoring
 # How to build
     Makefile has been added to the system which support clean & build targets. Run following command to build
     
-    1- make clean
-    2- make build
+    $ make clean
+    $ make build
 
     or (run make only, it will automatically clean and build for you.)
-    1- make 
+    $ make 
 
     built server and client binaries will be available in 'build' folder.
 
@@ -48,10 +48,3 @@ DeviceMonitoring
 
 # Testing
 This client and server were deployed on same machine and tested for given features.
-
-
-
-
-
-
-
