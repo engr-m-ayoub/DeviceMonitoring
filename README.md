@@ -61,7 +61,14 @@ DeviceMonitoring
 
 5- on server restart, all clients get disconnected and server loose messages count for all devices.
 
+# Configurations
+currently this server will handle 10 clients and will run port 8000 but these are compile time configureable. MAX_DEVICES_ALLOWED & SERVICE_PORT can be redefined in inc/monitoring.h.
 
+#define MAX_DEVICES_ALLOWED 10
+
+#define SERVICE_PORT 8000
+
+also any additional data can be added to struct md_data definition. It can be modified for any new measuirements. Change will automatically reflect in both client and server.
 
 # Testing
 This client and server were deployed on same machine and tested for given features.
