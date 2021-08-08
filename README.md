@@ -40,10 +40,15 @@ DeviceMonitoring
 
 # Features
 1- server counts total messages from all the devices
+
 2- serve keeps track of messages count for each device and diffrentiate a device with its name.
-3- client send dummy data to server but device name remains same throughout session
+
+3- client send dummy data to server but device name remains same throughout session.
+
 4- on client restart over a device, server will retain its messages count.
-5- on server restart, all clients get disconnected and server loose messages count for all devices
+
+5- on server restart, all clients get disconnected and server loose messages count for all devices.
+
 
 
 # Testing
