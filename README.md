@@ -1,6 +1,7 @@
 # DeviceMonitoring
 TCP/IP device monitoring
 
+Monitor service is single threaded applciation which effectively manages sockets for server and connected clients to listen for new connections as well as handle requests for existing clients. It is based on Linux interrupt on socket feature that are managed using select() API.
 
 # Project Hierarchy 
 DeviceMonitoring
