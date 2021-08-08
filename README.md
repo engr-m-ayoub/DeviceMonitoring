@@ -4,17 +4,29 @@ TCP/IP device monitoring
 
 # Project Hierarchy 
 DeviceMonitoring
+
     |- build
+    
     |
+    
     |- inc
+    
         |- monitoring.h
+        
     |
+    
     |- src
+    
         |- monioring_server.cpp
+        
         |- monioring_client.cpp
+        
     |
+    
     |- Makefile
+    
     |- README.md
+    
     
 # How to build
     Makefile has been added to the system which support clean & build targets. Run following command to build
