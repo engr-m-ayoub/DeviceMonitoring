@@ -165,8 +165,8 @@ int main(int argc, char *argv[])
                 int read_ret = read(sock_c[i], &data, sizeof(data));
                 if (read_ret == 0)
                 {
-                    sock_c[i] = 0;
                     close(sock_c[i]);
+                    sock_c[i] = 0;
                     continue;
                 }
                 int counter = 0;
